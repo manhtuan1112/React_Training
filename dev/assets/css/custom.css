@@ -1,0 +1,90 @@
+﻿.tag{
+    display:block;
+}
+.taglist li{
+    float:left;
+}
+.error{
+    color:red;
+}
+.register-top-grid input[type="password"], .register-bottom-grid input[type="password"] {
+    border: 1px solid #EEE;
+    outline-color: #FF5B36;
+    width: 85%;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+.register-top-grid textarea, .register-bottom-grid textarea {
+    border: 1px solid #EEE;
+    outline-color: #FF5B36;
+    width: 85%;
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+}
+.register-but input[type="submit"]:hover {
+    background: #1DBAA5;
+}
+.register-but  input[type="submit"] {
+    background: #F97E76;
+    color: #FFF;
+    font-size: 1em;
+    padding: 0.8em 2em;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    display: inline-block;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+.login-right input[type="password"] {
+    border: 1px solid #DDDBDB;
+    outline-color: #fb4d01;
+    width: 96%;
+    font-size: 0.9em;
+    padding: 10px;
+}
+
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+/****** Style Star Rating Widget *****/
+
+.toogle .rating { 
+  border: none;
+  float: left;
+}
+
+.toogle .rating > input { display: none; } 
+.toogle .rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.toogle .rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.toogle .rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.toogle .rating > input:checked ~ label, /* show gold star when clicked */
+.toogle .rating:not(:checked) > label:hover, /* hover current star */
+.toogle .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.toogle .rating > input:checked + label:hover, /* hover current star when changing rating */
+.toogle .rating > input:checked ~ label:hover,
+.toogle .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.toogle .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
